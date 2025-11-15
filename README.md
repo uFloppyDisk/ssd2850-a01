@@ -3,6 +3,8 @@
 
 A mock signup form design as prompted by the SSD2850 instructor.
 
+**Repo URL**: [https://github.com/uFloppyDisk/ssd2850-a01]()
+
 ## Theme Notes
 Night (dark theme):
 * Dark blue to deep blue linear gradient to mimic a clear night sky during twilight
