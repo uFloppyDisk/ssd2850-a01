@@ -78,3 +78,8 @@ p {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+.copyright-notice {
+  filter: invert();
+  mix-blend-mode: difference;
+}
