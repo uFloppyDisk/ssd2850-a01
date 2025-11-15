@@ -3,8 +3,13 @@ body {
   --font-primary-optical-sizing: auto;
   --font-primary-weight: 500;
 
+  --gfx-moon-pos: 10% 10%;
+
   min-height: 100dvh;
-  background: linear-gradient(rgba(251, 190, 154) 0%, rgba(248, 51, 26) 100%);
+  background:
+    radial-gradient(circle at var(--gfx-moon-pos), rgba(255, 252, 242, 1) 0%, rgba(181, 181, 181, 0.29) 4.4%, rgba(181, 181, 181, 0) 50%),
+    radial-gradient(circle at var(--gfx-moon-pos), rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(255, 252, 242, 1) 0%, rgba(255, 252, 242, 1) 3.9%, rgba(181, 181, 181, 0.29) 4%, rgba(181, 181, 181, 0) 4%),
+    linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 80%, rgba(9, 9, 121, 1) 100%);
 
   padding: 2rem 0;
 }
