@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/form.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+  <script defer src="scripts/index.js"></script>
+
+  <title>Signup form - SSD2850 Assignment 01</title>
+</head>
+
+<body class="container">
+  <div class="card">
+    <form id="formSignup" method="POST" action="#">
+      <h1>Signup</h1>
+      <fieldset>
+        <legend><span class="form__legend-cardinal">1</span>Account Info</legend>
+        <label for="nameFull" class="visually-hidden">Full Name...</label>
+        <input required id="nameFull" name="nameFull" type="text" placeholder="Full name..."="[A-Za-z]+" />
+        <label for="email" class="visually-hidden">Email Address...</label>
+        <input required id="email" name="email" type="email" placeholder="Email Address..." />
+        <label for="password" class="visually-hidden">Password...</label>
+        <input required id="password" name="password" type="password" placeholder="Password..."
+          pattern="(?=.*[^a-zA-Z\d\s])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{12,}" />
+        <div class="form__input-info">
+          <p>Minimum 12 Characters.</p>
+          <p>Must include uppercase, lowercase, number and symbol.</p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span class="form__legend-cardinal">2</span>Dev Skills</legend>
+        <div class="form__option-group">
+          <h3>Core Languages</h3>
+          <span>
+            <input id="coreLangHtml" type="checkbox" name="languages[]" value="HTML" />
+            <label for="coreLangHtml">HTML</label>
+          </span>
+          <span>
+            <input id="coreLangCss" type="checkbox" name="languages[]" value="CSS" />
+            <label for="coreLangCss">CSS</label>
+          </span>
+          <span>
+            <input id="coreLangJavaScript" type="checkbox" name="languages[]" value="JavaScript" />
+            <label for="coreLangJavaScript">JavaScript</label>
+          </span>
+          <span>
+            <input id="coreLangPHP" type="checkbox" name="languages[]" value="PHP" />
+            <label for="coreLangPHP">PHP</label>
+          </span>
+          <span>
+            <input id="coreLangC#" type="checkbox" name="languages[]" value="C#" />
+            <label for="coreLangC#">C#</label>
+          </span>
+          <span>
+            <input id="coreLangKotlin" type="checkbox" name="languages[]" value="Kotlin" />
+            <label for="coreLangKotlin">Kotlin</label>
+          </span>
+        </div>
+        <div class="form__option-group">
+          <h3>Libraries / Frameworks</h3>
+          <span>
+            <input id="frameworkReact" type="checkbox" name="frameworks[]" value="React" />
+            <label for="frameworkReact">React</label>
+          </span>
+          <span>
+            <input id="frameworkAngular" type="checkbox" name="frameworks[]" value="Angular" />
+            <label for="frameworkAngular">Angular</label>
+          </span>
+          <span>
+            <input id="frameworkVue" type="checkbox" name="frameworks[]" value="Vue.js" />
+            <label for="frameworkVue">Vue.js</label>
+          </span>
+        </div>
+        <div class="form__option-group">
+          <h3>Dev Ops</h3>
+          <span>
+            <input id="devopsGIT" type="checkbox" name="devops[]" value="GIT" />
+            <label for="devopsGIT">GIT</label>
+          </span>
+          <span>
+            <input id="devopsGulp" type="checkbox" name="devops[]" value="Gulp" />
+            <label for="devopsGulp">Gulp</label>
+          </span>
+          <span>
+            <input id="devopsDocker" type="checkbox" name="devops[]" value="Docker" />
+            <label for="devopsDocker">Docker</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span class="form__legend-cardinal">3</span>Experience</legend>
+        <div class="form__option-group">
+          <span>
+            <input id="levelBeginner" type="radio" name="experienceLevel" value="Beginner" />
+            <label for="levelBeginner">Beginner</label>
+          </span>
+          <span>
+            <input id="levelIntermediate" type="radio" name="experienceLevel" value="Intermediate" />
+            <label for="levelIntermediate">Intermediate</label>
+          </span>
+          <span>
+            <input id="levelAdvanced" type="radio" name="experienceLevel" value="Advanced" />
+            <label for="levelAdvanced">Advanced</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span class="form__legend-cardinal">4</span>Other</legend>
+        <div class="form__input-group">
+          <label for="referral">How did you hear about us?</label>
+          <select id="referral" name="referral">
+            <option disabled selected value="">Please Select...</option>
+            <optgroup label="Person">
+              <option value="friend">Friend</option>
+              <option value="family">Family</option>
+              <option value="colleague">Colleague</option>
+            </optgroup>
+            <optgroup label="Media">
+              <option value="internet">Internet</option>
+              <option value="radio">Radio</option>
+              <option value="tv">TV</option>
+              <option value="newspaper">Newspaper</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="magic">Magic!</option>
+              <option value="other">Other...</option>
+            </optgroup>
+          </select>
+        </div>
+        <div id="referralDetailsGroup" class="form__input-group">
+          <label for="referralDetails">Details, please...</label>
+          <textarea class="resize-vertical" id="referralDetails" name="referralDetails"
+            placeholder="Do tell!"></textarea>
+        </div>
+        <div class="form__input-group">
+          <label for="comments">Comments</label>
+          <textarea class="resize-vertical" id="comments" name="comments"></textarea>
+        </div>
+      </fieldset>
+      <div class="form__button-group">
+        <button class="form__button form__button--submit" type="submit">Submit</button>
+        <button class="form__button form__button--clear" type="reset">Clear Form</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <span></span>
+    <span class="copyright-notice">
+      &copy; <span id="copyrightYear">2025</span> Pawel Bartusiak
+    </span>
+  </footer>
+</body>
+
+</html>

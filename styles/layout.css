@@ -1,0 +1,25 @@
+.container {
+  margin: auto;
+  max-width: 100%;
+}
+
+.card {
+  padding: 2rem;
+
+  background: white;
+  box-shadow: 10px 10px 20px black;
+
+  border-radius: 1.25rem;
+}
+
+@media (min-width: 40em) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 66%;
+  }
+}

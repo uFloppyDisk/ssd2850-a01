@@ -1,0 +1,170 @@
+form {
+  display: grid;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+  padding: 0.5rem 0 0 0;
+
+  margin: 1rem 0;
+
+  border: 0;
+  border-top: 1px solid black;
+}
+
+fieldset:first-of-type {
+  margin: 2rem 0 0 0;
+}
+
+legend {
+  display: inline-flex;
+
+  gap: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+
+  padding: 0rem 0.5rem;
+
+  align-items: center;
+
+  text-wrap: nowrap;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 0.75rem 0.5rem;
+
+  background: rgba(232, 238, 239);
+  border: none;
+  border-radius: 0.25rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(126, 126, 126);
+}
+
+input {
+  --outline-style: solid 0.1rem;
+}
+
+
+input[type="text"]:user-valid,
+input[type="email"]:user-valid,
+input[type="password"]:user-valid {
+  outline: var(--outline-style) rgba(69, 166, 55);
+}
+
+input[type="text"]:user-invalid,
+input[type="email"]:user-invalid,
+input[type="password"]:user-invalid {
+  outline: var(--outline-style) rgb(243, 57, 18);
+}
+
+/* Specifying input type is a must to
+ * override the outline styles set in
+ * the above user-valid/-invalid
+ * rules. */
+input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: var(--outline-style) rgba(2, 113, 206);
+}
+
+textarea {
+  max-height: 20rem;
+}
+
+textarea.resize-vertical {
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-left: 0.7rem;
+}
+
+.form__legend-cardinal {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+  height: 1em;
+  aspect-ratio: 1/1;
+
+  padding: 0.6rem;
+
+  color: white;
+  background-color: rgba(20, 60, 109);
+  border-radius: 100%;
+
+  font-size: 0.75rem;
+  font-weight: bolder;
+}
+
+.form__input-info {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__option-group {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 0.75rem;
+}
+
+.form__option-group :not(span) {
+  grid-column: 1 / -1;
+}
+
+.form__button-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.form__button {
+  width: 100%;
+  padding: 1rem;
+
+  border: 2px solid;
+  border-color: transparent;
+  border-radius: 0.5rem;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.form__button--submit {
+  color: white;
+  background: rgba(20, 60, 109);
+}
+
+.form__button--clear {
+  border-color: rgba(213, 213, 213);
+  color: red;
+}

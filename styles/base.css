@@ -1,0 +1,75 @@
+body {
+  --font-primary: "Roboto Slab", serif;
+  --font-primary-optical-sizing: auto;
+  --font-primary-weight: 500;
+
+  min-height: 100dvh;
+  background: linear-gradient(rgba(251, 190, 154) 0%, rgba(248, 51, 26) 100%);
+
+  padding: 2rem 0;
+}
+
+* {
+  font-family: var(--font-primary);
+  font-optical-sizing: var(--font-primary-optical-sizing);
+  font-weight: var(--font-primary-weight);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1.5rem 0 0.5rem 0;
+
+  width: 100%;
+}
+
+h1 {
+  --color: rgba(20, 60, 109);
+  --shadow: 0px 2px 5px rgba(0, 0, 0, 0.45);
+
+  position: relative;
+
+  width: fit-content;
+
+  color: var(--color);
+  text-shadow: var(--shadow);
+
+  font-weight: bold;
+}
+
+h1::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+
+  width: calc(100% - 0.7rem);
+  height: 3px;
+
+  background-color: var(--color);
+  box-shadow: var(--shadow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
