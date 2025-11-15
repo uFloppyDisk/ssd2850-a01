@@ -10,3 +10,5 @@ Night (dark theme):
 * Dark blue to deep blue linear gradient to mimic a clear night sky during twilight
 * Two radial gradients to create a moon with a glow
 * "invert" heading and form styles to achieve a night theme using a `.dark` class and CSS variables
+
+![night theme](screenshots/night.png)
