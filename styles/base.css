@@ -110,6 +110,6 @@ p {
 }
 
 .copyright-notice {
-  filter: invert();
+  color: white;
   mix-blend-mode: difference;
 }
