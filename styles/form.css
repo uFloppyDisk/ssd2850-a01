@@ -12,7 +12,7 @@ fieldset {
   margin: 1rem 0;
 
   border: 0;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--color-text);
 }
 
 fieldset:first-of-type {
@@ -43,7 +43,8 @@ input[type="password"],
 textarea {
   padding: 0.75rem 0.5rem;
 
-  background: rgba(232, 238, 239);
+  color: var(--color-text);
+  background: var(--color-input-bg);
   border: none;
   border-radius: 0.25rem;
 }
@@ -105,8 +106,8 @@ input[type="radio"] {
 
   padding: 0.6rem;
 
-  color: white;
-  background-color: rgba(20, 60, 109);
+  color: var(--color-text-inverted);
+  background-color: var(--color-primary);
   border-radius: 100%;
 
   font-size: 0.75rem;
@@ -160,8 +161,8 @@ input[type="radio"] {
 }
 
 .form__button--submit {
-  color: white;
-  background: rgba(20, 60, 109);
+  color: var(--color-text-inverted);
+  background: var(--color-primary);
 }
 
 .form__button--clear {
